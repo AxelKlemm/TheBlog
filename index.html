@@ -6,7 +6,8 @@
 	<meta charset="UTF-8" />
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link rel="stylesheet" href="src/styles.css">
-</head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
 
 <body>
 <!--Header-->
@@ -22,12 +23,41 @@
         </div>
 
         <div class="nav-link-wrapper">
-          <a href="about.html">About</a>
-        </div>
-      </div>
+					<div class="dropdown">
+          	<div class="dropbtn">Blog
+								<div class="dropdown-content">
+									<a href="#">Life in Germany</a>
+									<a href="#">Travels</a>
+									<a href="#">Culture</a>
+									<a href="#">Food</a>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="dropdown">
+							<div class="dropbtn">About
+								<div class="dropdown-content">
+									<a href="#">Profile</a>
+									<a href="#">Passion</a>
+				      		<a href="mailto:neo.hsuehyen@gmail.com">Contact</a>
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+
 
       <div class="nav-right-side">
-        <div class="social media">Social media buttons</div>
+        <div class="nav-button-wrapper">
+					<a href="https://www.facebook.com/alexis.neo" class="fa fa-facebook"></a>
+					<a href="https://twitter.com/TheHangryKat" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-youtube"></a>
+					<a href="https://www.instagram.com/the.hangrykat" class="fa fa-instagram"></a>
+					<a href="#" class="fa fa-snapchat"></a>
+					<a href="https://de.linkedin.com/in/hsueh-yen-neo" class="fa fa-linkedin"></a>
+				</div>
       </div>
       </div>
     </div>
@@ -37,44 +67,49 @@
       <div class="content-grids-wrapper">
 
         <div class="content-grid-wrapper">
-          <div class="grid-img-background" style="background-image:url(img/grid1.jpg)"></div>
+					<a href="http://www.facebook.com">
+          	<div class="grid-img-background" style="background-image:url(img/grid1.jpg)"></div>
+          		<div class="img-text-wrapper">
 
-          <div class="img-text-wrapper">
-
-            <div class="subtitle"><h2>Munich</h2><br><br><p>My city, my home</p></div>
-          </div>
+            		<div class="subtitle"><h2>Munich</h2><br><br><p>My city, my home</p></div>
+				  		</div>
+					</a>
         </div>
 
         <div class="content-grid-wrapper">
-          <div class="grid-img-background" style="background-image:url(img/grid2.jpg)"></div>
-          <div class="img-text-wrapper">
+					<a href="http://www.facebook.com">
+          	<div class="grid-img-background" style="background-image:url(img/grid2.jpg)"></div></a>
+          		<div class="img-text-wrapper">
 
-            <div class="subtitle"><h2>Best of Germany</h2><br><br><p>Beautiful cities in Germany</p></div>
-          </div>
+          			<div class="subtitle"><h2>Best of Germany</h2><br><br><p>Beautiful cities in Germany</p></div>
+          		</div>
         </div>
 
         <div class="content-grid-wrapper">
-          <div class="grid-img-background" style="background-image:url(img/grid3.jpg)"></div>
-          <div class="img-text-wrapper">
+					<a href="http://www.facebook.com">
+          	<div class="grid-img-background" style="background-image:url(img/grid3.jpg)"></div></a>
+          		<div class="img-text-wrapper">
 
-            <div class="subtitle"><h2>German food & culture</h2><br><br><p>Food, beer, snacks, beer and beer</p></div>
-          </div>
+            		<div class="subtitle"><h2>German food & culture</h2><br><br><p>Food, beer, snacks, beer and beer</p></div>
+          		</div>
         </div>
 
         <div class="content-grid-wrapper">
-          <div class="grid-img-background" style="background-image:url(img/grid4.jpg)"></div>
-          <div class="img-text-wrapper">
+					<a href="http://www.facebook.com">
+          	<div class="grid-img-background" style="background-image:url(img/grid4.jpg)"></div></a>
+          		<div class="img-text-wrapper">
 
-            <div class="subtitle"><h2>Best of Europe</h2><br><br><p>Wanderlust around Europe</p></div>
-          </div>
+            		<div class="subtitle"><h2>Best of Europe</h2><br><br><p>Wanderlust around Europe</p></div>
+          		</div>
         </div>
 
 				<div class="content-grid-wrapper">
-					<div class="grid-img-background" style="background-image:url(img/grid5.jpg)"></div>
-					<div class="img-text-wrapper">
+					<a href="http://www.facebook.com">
+						<div class="grid-img-background" style="background-image:url(img/grid5.jpg)"></div></a>
+							<div class="img-text-wrapper">
 
-						<div class="subtitle"><h2>Passion</h2><br><br><p>Hobbies and interests</p></div>
-					</div>
+								<div class="subtitle"><h2>Passion</h2><br><br><p>Hobbies and interests</p></div>
+						</div>
 				</div>
 
       </div>
@@ -88,13 +123,13 @@
 
   contentGrids.forEach(contentGrid => {
     contentGrid.addEventListener('mouseover', () => {
-      console.log(contentGrid.childNodes[1].classList)
-      contentGrid.childNodes[1].classList.add('image-blur');
+      console.log(contentGrid.childNodes[1].childNodes[1].classList)
+      contentGrid.childNodes[1].childNodes[1].classList.add('image-blur');
     });
 
     contentGrid.addEventListener('mouseout', () => {
-      console.log(contentGrid.childNodes[1].classList)
-      contentGrid.childNodes[1].classList.remove('image-blur');
+      console.log(contentGrid.childNodes[1].childNodes[1].classList)
+      contentGrid.childNodes[1].childNodes[1].classList.remove('image-blur');
     });
   });
 
